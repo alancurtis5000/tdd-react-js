@@ -9,7 +9,16 @@ const gameReducer = (state = cloneDeep(initalState), action) => {
   const stateClone = cloneDeep(state);
   switch (action.type) {
     case types.INCREMENT:
-      console.log('INCREMENT', action);
+      return {
+        ...stateClone,
+        ...action.payload,
+      };
+    case types.DECREMENT:
+      return {
+        ...stateClone,
+        ...action.payload,
+      };
+    case types.RESET:
       return {
         ...stateClone,
         ...action.payload,
