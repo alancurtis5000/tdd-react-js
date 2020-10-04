@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export default function Fetch({ url }) {
   const [data, setData] = useState(null);
+
   useEffect(() => {
     let mounted = true;
     const loadData = async () => {
@@ -12,6 +13,7 @@ export default function Fetch({ url }) {
       }
     };
     loadData();
+
     return () => {
       mounted = false;
     };
