@@ -10,7 +10,9 @@ const ACounter = (props) => {
   return (
     <div className="ACounter">
       ACounter
-      <div className="count">{count}</div>
+      <div className="count" data-testid="count">
+        {count}
+      </div>
       <div>
         <button onClick={decrement}>-</button>
         <button onClick={increment}>+</button>

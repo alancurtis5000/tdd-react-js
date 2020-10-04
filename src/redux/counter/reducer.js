@@ -5,7 +5,7 @@ export const initalState = {
   count: 0,
 };
 
-const gameReducer = (state = cloneDeep(initalState), action) => {
+const counterReducer = (state = cloneDeep(initalState), action) => {
   const stateClone = cloneDeep(state);
   switch (action.type) {
     case types.INCREMENT:
@@ -28,4 +28,4 @@ const gameReducer = (state = cloneDeep(initalState), action) => {
   }
 };
 
-export default gameReducer;
+export default counterReducer;
